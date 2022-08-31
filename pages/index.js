@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Image from 'next/image'
+import Footer from '../components/Footer'
 import { MagnifyingGlassIcon, MicrophoneIcon } from '@heroicons/react/24/solid'
 
 export default function Home() {
@@ -38,6 +39,8 @@ export default function Home() {
 
 
       {/* footer  */}
+      
+      <Footer/>
 
     </div>
   )
