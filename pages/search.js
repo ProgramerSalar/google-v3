@@ -3,15 +3,19 @@
 import Head  from "next/head";
 import React from "react";
 import SearchHeader from "../components/SearchHeader";
+import SearchResults from "../components/SearchResults";
 import Response from "../Response";
+import { useRouter } from "next/router";
+
 
 export default function search({results}){
     console.log(results);
+    const router = useRouter()
     return(
         <div>
             <Head>
                 <title>
-                    Search Page
+                    {router.query.term} - search page 
                 </title>
 
             </Head>
@@ -21,6 +25,8 @@ export default function search({results}){
             
 
             {/* search result  */}
+
+            <SearchResults results = {results}/>
         </div>
     )
 }
@@ -36,4 +42,7 @@ export async function getServerSideProps(context){
             results:data
         }
     }
+
+
+
 }
