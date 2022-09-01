@@ -1,7 +1,8 @@
 
-
 import React from "react";
 import  Parser  from "html-react-parser";
+
+import PageinationButtons from "./PaginationButtons";
 
 
 export default function SearchResults({results}){
@@ -21,6 +22,8 @@ export default function SearchResults({results}){
 
                 </div>
             ))}
+
+            <PageinationButtons/>
         </dev>
     )
 }
